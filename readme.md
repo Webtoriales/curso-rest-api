@@ -1,6 +1,6 @@
-# Middlewares
+# Router de Express
 
-* Request del Cliente - Middleware - Respuesta del Servidor
-* Ciclo Solicitud - Respuesta
-* Acceso los objetos REQ y RES
-* Encandables
+* Middleware completo
+* Sistema de Routeo
+* "Mini app"
+* Manejadores de ruta montables y modulares
