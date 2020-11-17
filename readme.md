@@ -1,6 +1,5 @@
-# Router de Express
+# Que es MongoDB
 
-* Middleware completo
-* Sistema de Routeo
-* "Mini app"
-* Manejadores de ruta montables y modulares
+* Base de datos basada en documentos
+* Popular por velocidad y facilidad de uso
+* Informacion almacenada en documentos y colecciones (NoSQL)

@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const middlewares = require('./middlewares');
 
 const api = require('./api');
+const db = require('./db');
 
 const app = express();
 
