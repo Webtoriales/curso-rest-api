@@ -1,5 +1,3 @@
-# Que es MongoDB
+# Variables de Entorno Secretas
 
-* Base de datos basada en documentos
-* Popular por velocidad y facilidad de uso
-* Informacion almacenada en documentos y colecciones (NoSQL)
+En este video aprendemos a utilizar DOTENV para ocultar informacion sensible de nuestro API.

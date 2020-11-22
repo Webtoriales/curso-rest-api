@@ -5,7 +5,7 @@ const options = {
   useUnifiedTopology: true,
 };
 
-const connectionString = 'mongodb+srv://admin:iB7vdALhLeeZXQI1@cluster0.9sstf.mongodb.net/athletesDB?retryWrites=true&w=majority';
+const connectionString = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PW}@cluster0.9sstf.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 mongoose.connect(connectionString, options, (err) => {
   if (err) {
