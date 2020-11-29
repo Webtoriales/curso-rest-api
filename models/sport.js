@@ -1,9 +1,10 @@
-const mongoose = require('mongooose');
+const mongoose = require('mongoose');
 
 const sportsSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   playersPerTeam: {
     type: Number,
@@ -13,4 +14,4 @@ const sportsSchema = new mongoose.Schema({
 
 const Sport = mongoose.model('Sport', sportsSchema);
 
-module.exports = Sports;
+module.exports = Sport;
