@@ -1,3 +1,19 @@
-# Variables de Entorno Secretas
+# Esquemas y Modelos de Mongoose
 
-En este video aprendemos a utilizar DOTENV para ocultar informacion sensible de nuestro API.
+* MongoDB -> NoSQL sin esquemas
+  * Campo de nombre
+  * Campo de apellido
+  * Campo de nombre completo
+* Esquemas de Mongoose
+* Modelos de Mongoose
+
+* Deportes
+  * nombre
+  * jugadores por equipo
+
+* Atletas
+  * nombre
+  * apellidos
+  * nacimiento
+  * retirado(a)
+  * deportes
