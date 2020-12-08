@@ -3,8 +3,26 @@ const router = express.Router();
 
 const Sport = require('../models/sport');
 
-router.get('/', (req, res) => {
-  res.send('Obteniendo el recurso de deportes!');
+router.get('/', async (req, res, next) => {
+  try {
+    const sports = await Sport.find();
+    res.status(200).json(sports);
+  } catch (error) {
+    res.status(400);
+    next(error);
+  }
+});
+
+router.get('/:id', async (req, res, next) => {
+  const { id } = req.params;
+
+  try {
+    const sport = await Sport.findById(id);
+    res.status(200).json(sport);
+  } catch (error) {
+    res.status(400);
+    next(error);
+  }
 });
 
 router.post('/', async (req, res, next) => {
