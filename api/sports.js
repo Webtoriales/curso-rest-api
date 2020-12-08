@@ -8,14 +8,10 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', async (req, res, next) => {
-  const sport = new Sport({
-    name: req.body.name,
-    playersPerTeam: req.body.playersPerTeam
-  });
+  const sport = new Sport(req.body);
   try {
     const savedSport = await sport.save();
-    res.status(201);
-    res.json(savedSport);
+    res.status(201).json(savedSport);
   } catch (error) {
     res.status(400);
     next(error);
