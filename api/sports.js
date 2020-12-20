@@ -47,8 +47,15 @@ router.put('/:id', async (req, res, next) => {
   }
 });
 
-router.delete('/', (req, res) => {
-  res.send('Eliminar un recurso de deportes.');
+router.delete('/:id', async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const deletedSport = await Sport.findByIdAndDelete(id);
+    res.status(200).json(deletedSport);
+  } catch (error) {
+    res.status(400);
+    next(error);
+  }
 });
 
 module.exports = router;

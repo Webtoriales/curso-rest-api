@@ -46,8 +46,15 @@ router.put('/:id', async (req, res, next) => {
   }
 });
 
-router.delete('/', (req, res) => {
-  res.send('Eliminar un recurso de atletas.');
+router.delete('/:id', async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const deletedAthlete = await Athlete.findByIdAndDelete(id);
+    res.status(200).json(deletedAthlete);
+  } catch (error) {
+    res.status(400);
+    next(error);
+  }
 });
 
 module.exports = router;
